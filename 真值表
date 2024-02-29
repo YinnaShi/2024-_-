@@ -1,19 +1,5 @@
-def generate_truth_table():
-    header = ["P", "Q", "P ∧ Q", "P ∨ Q", "P → Q", "P ← Q", "P ↔ Q"]
-    print(" | ".join(header))
-    print("-" * 40)
-
-    truth_values = [False, True]
-
-    for p in truth_values:
-        for q in truth_values:
-            result = [
-                str(p),
-                str(q),
-                str(p and q),
-                str(p or q),
-                str(not p or q),
-                str(p or not q),
-                str((not p or q) and (p or not q)),
-            ]
-            print(" | ".join(result))
+print("P\tQ\tP∧Q\tP∨Q\tP¬∧Q\tP¬∨Q\tP→Q\tP←Q\tP↔Q")
+print("F\tF\tF\tF\tF\tF\tT\tT\tT")
+print("F\tT\tF\tT\tT\tT\tT\tF\tF")
+print("T\tF\tF\tT\tT\tT\tF\tT\tF")
+print("T\tT\tT\tT\tF\tF\tT\tT\tT")
