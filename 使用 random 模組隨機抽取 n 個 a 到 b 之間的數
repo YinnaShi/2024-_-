@@ -1,0 +1,18 @@
+import random
+
+# 讓使用者輸入 n, a, b
+n = int(input("請輸入 n（抽取的數字個數）: "))
+a = int(input("請輸入 a（最小數字）: "))
+b = int(input("請輸入 b（最大數字）: "))
+
+# 隨機抽取 n 個 a 到 b 之間的數字
+random_numbers = [random.randint(a, b) for _ in range(n)]
+
+# 刪除重複的數字
+unique_numbers = list(set(random_numbers))
+
+# 由大到小排序
+unique_numbers.sort(reverse=True)
+
+# 顯示結果
+print("抽取、刪除重複後、由大到小排序的數字:", unique_numbers)
